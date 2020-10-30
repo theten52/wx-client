@@ -1,7 +1,7 @@
 <template>
     <van-dialog v-model="show" title="长按二维码关注公众号"  @confirm="$emit('close')">
         <div class="text-center padding">
-            <van-image width="150" height="150" lazy-load :src="qrcodeImgUrl" >
+            <van-image width="150" height="150" lazy-load :src="qrCodeImgUrl" >
                 <template v-slot:error>二维码加载失败</template>
             </van-image>
         </div>
@@ -19,7 +19,7 @@ export default {
     },
     data(){
         return {
-            qrcodeImgUrl:process.env.VUE_APP_WX_QRCODE
+            qrCodeImgUrl:process.env.VUE_APP_WX_QRCODE
         }
     }
 }
